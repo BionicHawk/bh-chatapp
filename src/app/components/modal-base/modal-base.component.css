@@ -1,0 +1,74 @@
+.screen {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    
+.screen-open {
+    animation: modal_screen_appear 200ms;
+    visibility: visible;
+}
+
+.screen-close {
+    animation: modal_screen_appear 200ms reverse;
+    visibility: hidden;
+}
+
+@keyframes modal_screen_appear {
+    0% {
+        background-color: rgba(0, 0, 0, 0.0);
+        backdrop-filter: blur(0px);
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(8px);
+    }
+}
+
+.modal-card {
+    position: relative;
+    background-color: white;
+    padding: 1.5vh;
+    border-radius: 1.5vh;
+    width: 50%;
+    min-width: 250px;
+    max-width: 400px;
+    min-height: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none;
+    }
+    
+.modal-card-open {
+    animation: modal_appear 400ms;
+    visibility: visible;
+}
+
+.modal-card-close {
+    animation: modal_appear 400ms reverse;
+    visibility: hidden;
+}
+
+@keyframes modal_appear {
+    0% {
+        position: absolute;
+        bottom: 0px;
+    }
+
+    100% {
+        bottom: 40%;
+        position: absolute;
+    }
+}
+
+.modal-title {
+    font-size: 16pt;
+    text-overflow: ellipsis;
+}

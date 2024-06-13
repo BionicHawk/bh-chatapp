@@ -1,0 +1,13 @@
+<div>
+    <label for={{name}}>{{label}}</label>
+    <input
+        #inputElement
+        id={{name}} 
+        name={{name}} 
+        class="field" 
+        type={{type}} 
+        placeholder={{placeholder}} 
+        [attr.pattern]="pattern? pattern : null"
+        [required]="required == 'true' ? true : null"
+        (input)="onInputChange(inputElement.value)"/>      
+</div>

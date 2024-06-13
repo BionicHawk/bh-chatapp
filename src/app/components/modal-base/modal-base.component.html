@@ -1,0 +1,10 @@
+<div 
+    id="BlurScreen"
+    [className]="isOpen ? 'screen screen-open' : 'screen screen-close'"
+    (mousedown)="closeModal($event)">
+    <div [className]="isOpen ? 'modal-card modal-card-open' : 'modal-card modal-card-close'">
+        <span class="modal-title">{{title}}</span>
+        <hr />
+        <ng-content></ng-content>
+    </div>
+</div>

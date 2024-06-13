@@ -1,0 +1,19 @@
+.spinner {
+    border: #00799e solid 1vh;
+    border-right: transparent solid 1vh;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    animation: infinite ease-in-out 500ms spinning;
+    transform: rotate(0deg);
+}
+
+@keyframes spinning {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

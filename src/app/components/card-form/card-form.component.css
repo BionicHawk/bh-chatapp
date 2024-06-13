@@ -1,0 +1,18 @@
+.card-form {
+    background-color: white;
+    padding: 1vh;
+    border-radius: 1.5vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 50%;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+    user-select: none;
+}
+
+.form-title {
+    font-size: 20pt;
+    text-align: center;
+    font-weight: 500;
+}

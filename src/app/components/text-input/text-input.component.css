@@ -1,0 +1,26 @@
+div {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+label {
+    font-size: 11pt;
+    font-weight: 600;
+}
+
+.field {
+    padding: 1vh;
+    border-radius: 1vh;
+    font-size: 11pt;
+    border: #2e7931 solid 0.4vh;
+    outline:  none;
+    background-color: #dee7e2;
+    transition: all 200ms;
+}
+
+.field:focus {
+    border: #42c546 solid 0.4vh;
+    border-bottom: #2e7931 solid 0.4vh;
+    box-shadow: 0 0 1vh 0.5vh #77ee7b ;
+}

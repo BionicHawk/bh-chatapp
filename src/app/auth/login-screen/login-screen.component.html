@@ -1,0 +1,35 @@
+<app-card-form 
+    title="¡Inicia Sesión!"
+    (submitEvent)="onFormFilled()">
+    <app-text-input 
+        name="email" 
+        type="email" 
+        label="Correo electrónico" 
+        placeholder="Ingrese su correo electrónico"
+        (valueEmmiter)="getEmail($event)"
+        required='true'/>
+    <app-text-input 
+        name="password" 
+        type="password" 
+        label="Contraseña" 
+        placeholder="Ingrese su contraseña"
+        (valueEmmiter)="getPassword($event)"
+        required="true" />
+</app-card-form>
+
+<app-modal-base
+    [title]="isLoading ? 'Espera un poco' : errorTitle"
+    [isDismissible]="!isLoading"
+    [isOpen]="isModalOpen" 
+    (onClose)="setModalClose()" >
+    <div *ngIf="isLoading" id="loadingModalContainer">
+        <app-spinner />
+        <span>Esperando respuesta del servidor...</span>
+    </div>
+    <div *ngIf="error != null" class="ModalContentWithActions">
+        <span>{{errorMessage}}</span>
+        <div id="actions">
+            <button (mousedown)="isModalOpen = false">Ok</button>
+        </div>
+    </div>
+</app-modal-base>

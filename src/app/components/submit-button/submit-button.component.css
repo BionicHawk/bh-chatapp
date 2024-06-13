@@ -1,0 +1,23 @@
+input[type='submit'] {
+    background-color: #00799e;
+    padding: 1vh;
+    width: 100%;
+    color: white;
+    font-size: 11pt;
+    font-weight: 600;
+    border: none;
+    border-radius: 1vh;
+    transition: all 200ms;
+    outline: none;
+}
+
+input[type='submit']:focus {
+    background-color: #03a6d8;
+    box-shadow: 0 0 1vh 0.4vh #71cce7;
+}
+
+input[type='submit']:hover {
+    cursor: pointer;
+    background-color: #005068;
+}
+

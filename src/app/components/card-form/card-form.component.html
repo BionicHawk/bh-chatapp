@@ -1,0 +1,6 @@
+<form class="card-form"
+    (submit)="onSubmit(); $event.preventDefault()">
+    <span class="form-title">{{title}}</span>
+    <ng-content></ng-content>
+    <app-submit-button />
+</form>
